@@ -1,7 +1,7 @@
 import random
 
 def ask():
-	ask = input("What is your question?")
+	ask = input("What is your question?(Enter quit if you want to stop)")
 	return ask
 
 answers_list = ["It is certain", 
@@ -26,4 +26,26 @@ answers_list = ["It is certain",
 				  "Very doubtful" ]
 
 final_answer = random.choice(answers_list)
+
+
+
+	# question = ask()
+	# if question.lower() == "quit":
+	# 	stop = True
+	# else:
+	# 	if question[-1] != "?":
+	# 		print("I'm sorry, I can only answer questions.")
+	# 	else:
+	# 		print (final_answer)
+	
+	
+while True:
+	question = ask()
+	if question.lower() !="quit":
+		if question[-1] != "?":
+			print("I'm sorry, I can only answer questions.")
+		else:
+			print (final_answer)
+	else:
+		break
 
